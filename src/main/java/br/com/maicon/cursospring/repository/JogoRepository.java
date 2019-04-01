@@ -17,9 +17,9 @@ public interface JogoRepository extends JpaRepository<Jogo, Long> {
 
     Jogo findFirstByTimeAOrTimeB(Time timeA, Time timeB);
 
-    List<Jogo>  findByTimeAId(Long id);
-
     int countAllByDataAfter(Date data);
+
+    int countJogosByGolsAIsNullOrGolsBIsNull();
 
     @Override
     Page<Jogo> findAll(Pageable pageable);

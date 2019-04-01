@@ -19,7 +19,8 @@ public class JogoService {
     }
 
     public int getJogosRestantes() {
-        return repository.countAllByDataAfter(new Date());
+        //return repository.countAllByDataAfter(new Date());
+        return repository.countJogosByGolsAIsNullOrGolsBIsNull();
     }
 
     public boolean saveMany(List<Jogo> jogos) {
